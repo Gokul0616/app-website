@@ -1,0 +1,110 @@
+.landing-page-container {
+  height: 703px;
+  width: 100%;
+  background-color: rgb(37, 7, 137);
+}
+
+.landing-page-details-container {
+  height: 91%;
+  padding: 0 100px 0 100px;
+  display: flex;
+}
+
+.landing-page-details-img,
+.landing-page-details {
+  width: 50%;
+}
+.landing-page-details-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-page-details-heading-name1 {
+  color: #fff;
+  font-size: 35px;
+}
+.landing-page-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-page-details-heading-name2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: li;
+  padding: 15px 0;
+}
+.landing-page-signup-button {
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 15px;
+  border: none;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.landing-page-signup-button:hover {
+  background-color: rgb(57, 3, 232);
+  border: none;
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .landing-page-container{
+ 
+    height: 100%;
+  }
+  .landing-page-details-container {
+    padding: 0 20px; /* Reduces padding on smaller screens */
+    height:90%;width: 100%;
+       align-items: center;justify-content: center;
+  }
+
+  .landing-page-details-heading-name1 {
+    font-size: 28px; /* Adjusts font size for smaller screens */
+  }
+
+  .landing-page-details-heading-name2 {
+    font-size: 18px; /* Adjusts font size for smaller screens */
+  }
+
+  .landing-page-signup-button {
+    width: 120px; /* Adjusts button width for smaller screens */
+  }
+  .landing-page-details-img{
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .landing-page-container {
+    height: 100%;
+  }
+  
+  .landing-page-details-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    text-align: center; /* Center text inside the container */
+  }
+
+  .landing-page-details {
+    width: 100%; /* Full width for details */
+    text-align: center; /* Center text */
+    margin-bottom: 20px; /* Add space between stacked elements */
+  }
+
+  .landing-page-details-heading-name1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .landing-page-details-heading-name2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .landing-page-signup-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
