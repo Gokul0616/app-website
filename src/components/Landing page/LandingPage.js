@@ -5,6 +5,22 @@ import LandingpageImg from "./assets/cover-image.png";
 import AppApk from "./assets/tieoda.apk";
 
 const LandingPage = () => {
+  const handleDownload = () => {
+    // Create a virtual link
+    const link = document.createElement("a");
+    link.href = AppApk;
+    link.download = "tieoda.apk";
+
+    // Append it to the body
+    document.body.appendChild(link);
+
+    // Trigger the click event
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="landing-page-container">
       <Navbar />
@@ -21,18 +37,11 @@ const LandingPage = () => {
             </div>
             <div className="landing-page-details-heading-name2">
               <button
-                // onClick={handleClick}
+                onClick={handleDownload}
                 className="landing-page-signup-button"
                 style={{ cursor: "pointer" }}
               >
-                <a
-                  href={AppApk}
-                  download="tieoda.apk" // Ensuring the correct file name
-                  className="landing-page-signup-button"
-                  style={{ cursor: "pointer", textDecoration: "none" }}
-                >
-                  Get app
-                </a>
+                Get app
               </button>
             </div>
           </div>
